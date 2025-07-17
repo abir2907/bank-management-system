@@ -1,7 +1,14 @@
 package bank.management.system;
 
-public class Login {
+import javax.swing.*;
+
+public class Login extends JFrame{
+    
+    Login(){
+        // Design Login frame here
+    }
+    
     public static void main(String args[]){
-//        Test
+        new Login(); // Open the login frame as soon as we start the application
     }    
 }
