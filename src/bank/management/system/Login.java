@@ -2,8 +2,11 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 
-public class Login extends JFrame{
+public class Login extends JFrame implements ActionListener{
+    
+    JButton login, signup, clear;
     
     Login(){
         setTitle("AUTOMATED TELLER MACHINE");
@@ -40,22 +43,25 @@ public class Login extends JFrame{
         pinTextField.setBounds(300, 220, 230, 30);
         add(pinTextField);
         
-        JButton login = new JButton("SIGN IN");
+        login = new JButton("SIGN IN");
         login.setBounds(300, 300, 100, 30);
         login.setBackground(Color.BLACK);
         login.setForeground(Color.WHITE);
+        login.addActionListener(this);
         add(login);
         
-        JButton clear = new JButton("CLEAR");
+        clear = new JButton("CLEAR");
         clear.setBounds(430, 300, 100, 30);
         clear.setBackground(Color.BLACK);
         clear.setForeground(Color.WHITE);
+        clear.addActionListener(this);
         add(clear);
         
-        JButton signup = new JButton("SIGN UP");
+        signup = new JButton("SIGN UP");
         signup.setBounds(300, 350, 230, 30);
         signup.setBackground(Color.BLACK);
         signup.setForeground(Color.WHITE);
+        signup.addActionListener(this);
         add(signup);
         
         getContentPane().setBackground(Color.WHITE);        
@@ -63,6 +69,16 @@ public class Login extends JFrame{
         setSize(800, 480); // Length & breadth of frame
         setVisible(true); // Now we can see the frame
         setLocation(350, 200); // From where to open frame , 350 & 200 from left & right
+    }
+    
+    public void actionPerformed(ActionEvent ae){
+        if (ae.getSource() == clear) {
+            // TODO
+        } else if (ae.getSource() == login) {
+            // TODO
+        } else if (ae.getSource() == signup) {
+            // TODO
+        }
     }
     
     public static void main(String args[]){
