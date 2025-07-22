@@ -59,6 +59,20 @@ public class SignupOne extends JFrame {
         gender.setBounds(100, 290, 200, 30);
         add(gender);
         
+        JRadioButton male = new JRadioButton("Male");
+        male.setBounds(300, 290, 60, 30);
+        male.setBackground(Color.WHITE);
+        add(male);        
+        
+        JRadioButton female = new JRadioButton("Female");
+        female.setBounds(450, 290, 120, 30);
+        female.setBackground(Color.WHITE);
+        add(female);
+        
+        ButtonGroup gendergroup = new ButtonGroup();
+        gendergroup.add(male);
+        gendergroup.add(female);
+        
         JLabel email = new JLabel("Email Address:");
         email.setFont(new Font("Raleway", Font.BOLD, 20));
         email.setBounds(100, 340, 200, 30);
@@ -73,6 +87,26 @@ public class SignupOne extends JFrame {
         marital.setFont(new Font("Raleway", Font.BOLD, 20));
         marital.setBounds(100, 390, 200, 30);
         add(marital);
+        
+        JRadioButton married = new JRadioButton("Married");
+        married.setBounds(300, 390, 100, 30);
+        married.setBackground(Color.WHITE);
+        add(married);        
+        
+        JRadioButton unmarried = new JRadioButton("Unmarried");
+        unmarried.setBounds(450, 390, 100, 30);
+        unmarried.setBackground(Color.WHITE);
+        add(unmarried);
+        
+        JRadioButton other = new JRadioButton("Other");
+        other.setBounds(630, 390, 100, 30);
+        other.setBackground(Color.WHITE);
+        add(other);
+        
+        ButtonGroup maritalgrouup = new ButtonGroup();
+        maritalgrouup.add(married);
+        maritalgrouup.add(unmarried);
+        maritalgrouup.add(other);
         
         JLabel address = new JLabel("Address:");
         address.setFont(new Font("Raleway", Font.BOLD, 20));
